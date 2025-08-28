@@ -17,7 +17,7 @@
 // console.log("nulo: ", typeof nulo); //
 
 
-let nombre = 'Hernan';
+let nombre = "Hernan";
 let edad = 24;
 let activo = false
 let sinDefinir
@@ -58,7 +58,13 @@ let nota = 10
     // console.log("El alumno", nombre, "tiene un", nota);
 
 
-// para comentar rapidamente, es ctrl + /
+// TIP:
+// Para comentar y descomentar rapidamente, es ctrl + / 
+// Teclado espanol: es ctrl + shift + 7
+
+// TIP:
+// Ctrl + D, habiendo seleccionado una palabra, te permite manipular ambas a la vez
+
 let mensaje = "Alumno es " + nombre + " tiene un " + nota
 
 console.log(mensaje);
