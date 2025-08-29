@@ -7,7 +7,6 @@ let pares = []
 let impares = []
 
 numeros.forEach(num => {
-    
     if(num % 2 === 0){    
         pares.push(num)
     }else{
