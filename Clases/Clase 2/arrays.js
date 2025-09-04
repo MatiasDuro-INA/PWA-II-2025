@@ -66,10 +66,8 @@ let nombreinvertido = split.reverse().join("");
 
 if(nombreentero === nombreinvertido){
     console.log("Es palindromo!: ");
-    
 }else{
     console.log("No es palindromo: ");
-    
 }
 
 
