@@ -1,6 +1,10 @@
 
 let frutas = ["Banana", "Manzana", "Frutilla"]
 
+frutas.map((fruta) => {
+
+})
+
 // console.log("Frutas: ", frutas);
 
 // Agrega un elemento AL FINAL del array
