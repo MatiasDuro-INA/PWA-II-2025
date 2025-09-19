@@ -5,6 +5,10 @@ frutas.map((fruta) => {
 
 })
 
+frutas.map(function(fruta){
+    
+})
+
 // console.log("Frutas: ", frutas);
 
 // Agrega un elemento AL FINAL del array
