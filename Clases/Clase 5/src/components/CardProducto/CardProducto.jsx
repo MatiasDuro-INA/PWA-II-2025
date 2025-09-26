@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Styles.css"
 import Descripcion from '../Descripcion/Descripcion'
+import Titulo from '../Titulo/Titulo'
+import Button from '../Button/Button'
 
 export default function CardProducto() {
 
@@ -10,15 +12,16 @@ export default function CardProducto() {
     <div class="card">
 
 
-      <h2 class="card-title">Título de la Card</h2>
-      <p class="card-description">
-        Esta es una descripción corta dentro de la card. Podés escribir lo que quieras aquí.
-      </p>
+    <Titulo titulo={"Título de la Card"} color={"red"}/>
 
-      <p class="card-price">$2.500</p>
+
+      <Descripcion texto={"Esta es una descripción corta dentro de la card. Podés escribir lo que quieras aquí."}/>
+      <Descripcion texto={"$2.500"} color="green"/>
+
+      <Button tituloButton={"Agregar al carrito"} background="green"/>
+
+      <Button tituloButton={"Comprar"} background="blue"/>
       
-      <button class="btn btn-cart">Agregar al carrito</button>
-      <button class="btn btn-buy">Comprar</button>
 
 
     </div>

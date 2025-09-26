@@ -2,10 +2,10 @@
 import React, { useState } from 'react'
 import '../../App.css'
 
-export default function Button({tituloButton, Operat, contador}) {
+export default function Button({tituloButton, Operat, contador, background}) {
     
   return (
-    <button onClick={() => Operat()}> 
+    <button style={{backgroundColor: background}} onClick={() => Operat()}> 
          {tituloButton} {contador}
         </button>
   )

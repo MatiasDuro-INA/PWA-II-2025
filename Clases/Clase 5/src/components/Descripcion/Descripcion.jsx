@@ -1,8 +1,8 @@
 
 import React from 'react'
 import '../../App.css'
-export default function Descripcion({texto}) {
+export default function Descripcion({texto, color}) {
   return (
-    <p>{texto}</p>
+    <p style={{color:color}}>{texto}</p>
   )
 }
