@@ -1,38 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Titulo from "./components/Titulo/Titulo";
+import Descripcion from "./components/Descripcion/Descripcion";
+import Button from "./components/Button/Button";
 
 function App() {
-
-  const [contador, setContador] = useState(0)
-
-  // SetContador, o los sets de los estados, no se pueden pasar directamente al onclick
-  // al onclick, hay que pasarle siempre una funcion
-
-  function ManejarClick(){    
-    setContador(contador + 1)
+  const [contador, setContador] = useState(0) //arranca en 0
+  function Sumar() {
+    setContador(contador + 1);
   }
-
+  function Restar() {
+    setContador(contador - 1);
+  }
   return (
     <>
-
-{/* h1 va a componente Titulo */}
-    <h1>Clase 5</h1> 
-
-{/* p va a componente Descripcion */}
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat debitis doloribus rem voluptate error obcaecati quos laboriosam rerum maxime neque blanditiis, corrupti adipisci aliquam? Saepe ducimus excepturi aliquam tempora sunt.</p>
-       
-
-       {/* button vaya al componente Button */}
-        <button onClick={() => ManejarClick()}>
-          +1 El contador va en {contador}
-        </button>
-        <button onClick={ () => setContador(contador - 1)}>
-          -1 El contador va en {contador}
-        </button>
+      <Titulo titulo={"Clase 5"} color={"blue"} />
+      <Descripcion texto={"texto corto"} />
+      <Button tituloButton={"suma"} Operat ={Sumar}contador ={contador}/>
+      <Button tituloButton={"resta"} Operat ={Restar}contador ={contador}/> 
+    
     </>
-  )
+  );
 }
 
-export default App
+export default App;
