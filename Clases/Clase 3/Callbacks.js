@@ -13,7 +13,7 @@ function operacionMatematica(num1, num2, callback){
     return callback(num1, num2)
 }
 
-// operacionMatematica(10, 2, suma)
+operacionMatematica(10, 2, suma)
 
 // console.log(operacionMatematica(10, 2, suma));
 // console.log(operacionMatematica(10, 2, (a, b) => {

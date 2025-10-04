@@ -18,10 +18,6 @@ export default function CardProducto() {
       <Descripcion texto={"Esta es una descripción corta dentro de la card. Podés escribir lo que quieras aquí."}/>
       <Descripcion texto={"$2.500"} color="green"/>
 
-      <Button tituloButton={"Agregar al carrito"} background="green"/>
-
-      <Button tituloButton={"Comprar"} background="blue"/>
-      
 
 
     </div>
