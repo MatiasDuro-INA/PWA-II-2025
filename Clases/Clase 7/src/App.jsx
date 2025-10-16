@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import Productos from './components/Productos/Productos'
 import Footer from './components/Footer/Footer'
+import RandomPeople from './components/Productos/RandomPeople'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,8 +14,9 @@ function App() {
     <>
       {/* <Navbar/> */}
       {/* <Hero/> */}
-      <Productos/>
+      {/* <Productos/> */}
       {/* <Footer/> */}
+      <RandomPeople/>
     </>
   )
 }
