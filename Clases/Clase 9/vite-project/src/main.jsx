@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Usuarios from "./usuarios.jsx";
+import App from "./App";
+// import Usuarios from "./usuarios.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Usuarios />
+    {/* <Usuarios /> */}
+    <App/>
   </React.StrictMode>
 );

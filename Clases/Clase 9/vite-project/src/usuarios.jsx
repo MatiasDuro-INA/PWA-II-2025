@@ -1,23 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { obtenerUsuarios } from "./usuarios";
 import "./style.css";
 
 export default function Usuarios() {
   const [usuarios, setUsuarios] = useState([]);
 
-  // Cargar los usuarios desde la API o desde el archivo usuarios.js
   useEffect(() => {
     async function cargarUsuarios() {
       try {
-        // Si querés traerlos de la API
-        const respuesta = await fetch("https://randomuser.me/api/?results=6");
+        const respuesta = await fetch("https://thesimpsonsapi.com/api/characters");
         const datos = await respuesta.json();
         setUsuarios(datos.results);
-
-        // Si querés probar con los datos locales del archivo usuarios.js:
-        // const datosLocales = await obtenerUsuarios();
-        // setUsuarios(datosLocales.results);
-
       } catch (error) {
         console.error("Error al cargar los usuarios:", error);
       }
@@ -27,18 +19,17 @@ export default function Usuarios() {
   }, []);
 
   return (
-    <div className="container">
-      <h1>Personas aleatorias</h1>
-      <div className="card-grid">
-        {usuarios.map((user, index) => (
-          <div key={index} className="card">
-            <img src={user.picture.large} alt={user.name.first} />
-            <h3>
-              {user.name.first} {user.name.last}
-            </h3>
-            <p><strong>Nacionalidad:</strong> {user.nat}</p>
-            <p><strong>Género:</strong> {user.gender}</p>
-            <p><strong>Email:</strong> {user.email}</p>
+    <div className="usuarios-container">
+      <h1 className="titulo">Lista de Usuarios</h1>
+      <div className="usuarios-grid">
+        {usuarios.map((user) => (
+          <div className="usuario-card" key={user.id}>
+            <img className="usuario-img" src={user.portrait_path} alt={user.name} />
+            <h3 className="usuario-nombre">{user.name}</h3>
+            <p className="usuario-origen">{user.name}</p>
+            <span className={`usuario-genero ${user.gender.toLowerCase()}`}>
+              {user.gender}
+            </span>
           </div>
         ))}
       </div>
